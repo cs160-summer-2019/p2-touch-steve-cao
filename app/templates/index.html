@@ -83,8 +83,53 @@
 			</div>
 		</div>
 	</div>
+  
 	<script>
 	  // your solution here
+    
+    var first = document.getElementById('rotate-box');
+    var rotate = new Hammer(first);
+    rotate.get('rotate').set({enable: true});
+    rotate.on("rotate", function(ev_rotate) {
+      alert("popup for rotation");
+    });
+    
+    var second = document.getElementById('pinch-box');
+    var pinch = new Hammer(second);
+    pinch.get('pinch').set({enable: true});
+    pinch.on("pinch", function(ev_rotate) {
+      alert("popup for pinching");
+    });
+    
+    var third = document.getElementById('press-box');
+    var press = new Hammer(third);
+    press.get('press').set({enable: true});
+    press.on("press", function(ev_rotate) {
+      alert("popup for pressing");
+    });
+    
+    var fourth = document.getElementById('pan-box');
+    var pan = new Hammer(fourth);
+    pan.get('pan').set({enable: true});
+    pan.on("pan", function(ev_rotate) {
+      alert("popup for pan");
+    });
+    
+    var fifth = document.getElementById('tap-box');
+    var tap = new Hammer(fifth);
+    tap.get('tap').set({enable: true});
+    tap.on("tap", function(ev_rotate) {
+      alert("popup for tapping");
+    });
+    
+    var sixth = document.getElementById('swipe-box');
+    var swipe = new Hammer(sixth);
+    swipe.get('swipe').set({enable: true});
+    swipe.on("swipe", function(ev_rotate) {
+      alert("popup for swiping");
+    });
+
+    
   </script>
 </body>
 </html>
